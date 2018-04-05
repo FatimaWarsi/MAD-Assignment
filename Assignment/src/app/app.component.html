@@ -1,0 +1,84 @@
+<div id="Main">
+<form>
+<legend>Basic Info</legend>
+<table>  
+<ul>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      <input type="text" class="TextInp" placeholder="Enter Name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"/>
+    </td>
+    <td>
+     <p class="Error"> {{name | NameFormat}}</p>
+      </td>
+  </tr >
+    <tr>
+      <td>
+      Age
+      </td>
+      <td>
+        
+      <input type="text" class="TextInp" placeholder="Enter Age"[(ngModel)]="age" [ngModelOptions]="{standalone: true}"/>
+      </td>
+      <td>
+      <p class="Error"> {{age | AgeFormat}}</p>
+  </td>
+</tr>
+<tr>
+  <td> 
+      Gender
+  </td>
+  <td>
+      <input type="radio" name="Male">Male
+
+      <input type="radio" name="Female">Female
+  </td>
+</tr>
+<tr>
+  <td>
+      Email
+  </td>
+  <td>
+     <input type="text" Name="Email" class="TextInp" placeholder="Enter Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"/>
+  </td>
+  <td>
+    <p class="Error"> 
+      {{email | EmailFormat}}
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>
+     Contact 
+  </td>
+  <td>
+      <input type="text" Name=" Mobile Phone" class="TextInp" placeholder="Enter Contact" [(ngModel)]="contact" [ngModelOptions]="{standalone: true}"/>
+    </td> 
+  <td>
+    <p class="Error"> 
+      {{contact | ContactFormat}}
+    </p>
+  </td>
+</tr>
+<tr>
+  <td>
+      DOB
+  </td>
+  <td>
+      <input type="text" Name="DOB" class="TextInp" placeholder="Enter DOB" [(ngModel)]="dob" [ngModelOptions]="{standalone: true}"/>
+  </td>
+  <td>
+  <p class="Error"> 
+    {{dob | DateFormat}}
+  </p>
+</td>
+</tr>
+</ul>
+</table>
+    <button name="submit" id="BtnSubmit">submit</button>
+  
+</form>
+</div>
+
